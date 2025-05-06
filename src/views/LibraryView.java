@@ -16,7 +16,7 @@ public class LibraryView {
     private final Scanner scanner;
 
     public LibraryView() {
-        this.bookController = new BookController();
+        this.bookController = new BookController(20);
         this.customerController = new CustomerController();
         this.orderController = new OderController();
         this.scanner = new Scanner(System.in);
@@ -52,6 +52,8 @@ public class LibraryView {
             System.out.println("2️⃣ List Books");
             System.out.println("3️⃣ Update Book");
             System.out.println("4️⃣ Delete Book");
+            System.out.println("5️⃣ Sort Books by Price");
+            System.out.println("6️⃣ Sort Books by Title");
             System.out.println("0️⃣ Back");
             System.out.print("Choose an option: ");
             option = readInt();
@@ -61,6 +63,14 @@ public class LibraryView {
                 case 2 -> bookController.listBooks();
                 case 3 -> updateBook();
                 case 4 -> deleteBook();
+                case 5 -> {
+                    bookController.sortBooksByPrice();
+                    bookController.listBooks();
+                }
+                case 6 -> {
+                    bookController.sortByTitle();
+                    bookController.listBooks();
+                }
                 case 0 -> System.out.println("🔙 Back to main menu.");
                 default -> System.out.println("❌ Invalid option.");
             }
