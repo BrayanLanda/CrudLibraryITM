@@ -1,5 +1,5 @@
 ## Diagrama ER Library
-![book-system.png](../../Downloads/book-system.png)
+![diagram-export-5-6-2025-9_44_37-PM](https://github.com/user-attachments/assets/07140e5c-2040-4663-8614-ac166e314e69)
 # LogicCode
 ## Book
     publico clase Book
