@@ -53,11 +53,10 @@ public class BookController {
     public boolean deleteBook(int id) {
         for (int i = 0; i < count; i++) {
             if (books[i].getId() == id) {
-                // Shift all elements to the left to fill the gap
                 for (int j = i; j < count - 1; j++) {
                     books[j] = books[j + 1];
                 }
-                books[count - 1] = null;  // Clean last position
+                books[count - 1] = null;
                 count--;
                 System.out.println("✅ Book deleted successfully.");
                 return true;
@@ -86,7 +85,6 @@ public class BookController {
         for (int i = 0; i < count - 1; i++) {
             for (int j = 0; j < count - i - 1; j++) {
                 if (books[j].getPrice() > books[j + 1].getPrice()) {
-                    // Swap books[j] and books[j + 1]
                     Book temp = books[j];
                     books[j] = books[j + 1];
                     books[j + 1] = temp;
@@ -96,7 +94,7 @@ public class BookController {
         System.out.println("✅ Books sorted by price (ascending).");
     }
 
-    // Sort by Title (using simple bubble sort for practice)
+    // Sort by Title
     public void sortByTitle() {
         for (int i = 0; i < count - 1; i++) {
             for (int j = 0; j < count - i - 1; j++) {

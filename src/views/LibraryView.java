@@ -246,20 +246,20 @@ public class LibraryView {
     private int readInt() {
         while (!scanner.hasNextInt()) {
             System.out.println("❌ Invalid input. Enter a number:");
-            scanner.next();  // Clear invalid input
+            scanner.next();
         }
         int number = scanner.nextInt();
-        scanner.nextLine();  // Clear buffer
+        scanner.nextLine();
         return number;
     }
 
     private double readDouble() {
         while (!scanner.hasNextDouble()) {
             System.out.println("❌ Invalid input. Enter a decimal number:");
-            scanner.next();  // Clear invalid input
+            scanner.next();
         }
         double number = scanner.nextDouble();
-        scanner.nextLine();  // Clear buffer
+        scanner.nextLine();
         return number;
     }
 }
